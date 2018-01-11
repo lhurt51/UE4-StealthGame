@@ -14,6 +14,7 @@ Features
 
 	- Game Objective to Extract to an 'extraction zone'
 **( Does Not Include Yet )**
+
 	- AI Guard that senses players and noises
 	- First Person Weapon that can distract Guard AI (Shoot Projectiles at wall)
 	- Game loop with 'game over' spectating.
@@ -24,6 +25,7 @@ Includes solutions to several challenges you create during the Udemy Course:
 
 	- Black Hole (Sucking up nearby Actors)
 **( Does Not Include Yet )**
+
 	- Launch Pad (Launch Players and Actors)
 	- Patrolling AI
 
