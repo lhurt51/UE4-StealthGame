@@ -27,9 +27,6 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Effects")
 	UParticleSystem* PickupFX;
 
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
 	void PlayEffects();
 
 public:

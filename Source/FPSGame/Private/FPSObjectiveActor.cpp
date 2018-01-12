@@ -21,14 +21,6 @@ AFPSObjectiveActor::AFPSObjectiveActor()
 	SphereComp->SetupAttachment(MeshComp);
 }
 
-// Called when the game starts or when spawned
-void AFPSObjectiveActor::BeginPlay()
-{
-	Super::BeginPlay();
-	
-	PlayEffects();
-}
-
 void AFPSObjectiveActor::PlayEffects()
 {
 	UGameplayStatics::SpawnEmitterAtLocation(this, PickupFX, GetActorLocation());
