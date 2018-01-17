@@ -18,17 +18,24 @@ public:
 	AFPSAIGuard();
 
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	UPawnSensingComponent* PawnSensingComp;
+
+	FRotator OriginalRotation;
+
+	FTimerHandle TimerHandle_ResetOrientation;
+
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 
 	UFUNCTION()
 	void OnPawnSee(APawn* SeenPawn);
 
 	UFUNCTION()
 	void OnNoiseHeard(APawn* NoiseInstigator, const FVector& Location, float Volume);
+
+	UFUNCTION()
+	void ResetOrientation();
 
 public:	
 	// Called every frame
