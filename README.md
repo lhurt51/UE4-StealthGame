@@ -24,9 +24,9 @@ Features
 Includes solutions to several challenges you create during the Udemy Course:
 
 	- Black Hole (Sucking up nearby Actors)
-**( Does Not Include Yet )**
-
 	- Launch Pad (Launch Players and Actors)
+**( Does Not Include Yet )**
+	
 	- Patrolling AI
 
 
