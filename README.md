@@ -13,11 +13,11 @@ Get the Udemy Course now and learn C++ for Unreal Engine 4: [DISCOUNT LINK](http
 Features
 
 	- Game Objective to Extract to an 'extraction zone'
-**( Does Not Include Yet )**
-
 	- AI Guard that senses players and noises
 	- First Person Weapon that can distract Guard AI (Shoot Projectiles at wall)
 	- Game loop with 'game over' spectating.
+**( Does Not Include Yet )**
+	
 	- Works fully in multiplayer!
 
 
@@ -25,9 +25,7 @@ Includes solutions to several challenges you create during the Udemy Course:
 
 	- Black Hole (Sucking up nearby Actors)
 	- Launch Pad (Launch Players and Actors)
-**( Does Not Include Yet )**
-	
-	- Patrolling AI
+	- Patrolling AI (AI that will patrol through selected Target Points)
 
 
 Based on Tom Looman's simplified FPS Template: https://github.com/tomlooman/SimpleFPSTemplate
