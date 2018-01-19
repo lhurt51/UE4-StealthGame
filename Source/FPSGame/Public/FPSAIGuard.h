@@ -52,6 +52,19 @@ protected:
 	UFUNCTION(BlueprintImplementableEvent, Category = "AI")
 	void OnStateChanged(EAIState NewState);
 
+private:
+
+	UPROPERTY(EditInstanceOnly, Category = "AI")
+	bool bPatrol;
+
+	UPROPERTY(EditInstanceOnly, Category = "AI", meta = (EditCondition = "bPatrol"))
+	TArray<AActor*> PatrolPoints;
+
+	int16 CurrentPatrolPointIndex;
+
+	void MoveToNextPatrolPoint();
+
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
