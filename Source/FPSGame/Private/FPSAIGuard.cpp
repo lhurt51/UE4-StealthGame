@@ -1,9 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "FPSAIGuard.h"
+
+#include "FPSGameMode.h"
+
 #include "Perception/PawnSensingComponent.h"
 #include "DrawDebugHelpers.h"
-#include "FPSGameMode.h"
 #include "AI/Navigation/NavigationSystem.h"
 
 
