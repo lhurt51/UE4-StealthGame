@@ -30,6 +30,9 @@ AFPSProjectile::AFPSProjectile()
 
 	// Die after 3 seconds by default
 	InitialLifeSpan = 3.0f;
+
+	SetReplicates(true); // Creates a copy of this object on the client.
+	SetReplicateMovement(true); // Setting the object able to move in the world
 }
 
 
@@ -41,7 +44,9 @@ void AFPSProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPr
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
 	}
 
-	MakeNoise(1.0f, Instigator);
-
-	Destroy();
+	if (Role == ROLE_Authority)
+	{
+		MakeNoise(1.0f, Instigator);
+		Destroy();
+	}
 }
