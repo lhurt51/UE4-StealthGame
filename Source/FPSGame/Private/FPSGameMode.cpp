@@ -25,17 +25,18 @@ void AFPSGameMode::CompleteMission(APawn* InstigatorPawn, bool bMissionSuccess)
 	if (InstigatorPawn)
 	{
 		if (SpectatingViewpointClass) {
-			AActor* NewViewTarget = nullptr;
 			TArray<AActor*> ReturnedActors;
-
 			UGameplayStatics::GetAllActorsOfClass(this, SpectatingViewpointClass, ReturnedActors);
 			// Change view target if any valid actor is found
 			if (ReturnedActors.Num() > 0)
 			{
-				NewViewTarget = ReturnedActors[0];
+				AActor* NewViewTarget = ReturnedActors[0];
 
-				APlayerController* PC = Cast<APlayerController>(InstigatorPawn->GetController());
-				if (PC) PC->SetViewTargetWithBlend(NewViewTarget, 0.5f, EViewTargetBlendFunction::VTBlend_Cubic);
+				for (FConstPlayerControllerIterator It = GetWorld()->GetPlayerControllerIterator(); It; It++)
+				{
+					APlayerController* PC = It->Get();
+					if (PC) PC->SetViewTargetWithBlend(NewViewTarget, 0.5f, EViewTargetBlendFunction::VTBlend_Cubic);
+				}				
 			}
 		}
 		else
@@ -46,6 +47,4 @@ void AFPSGameMode::CompleteMission(APawn* InstigatorPawn, bool bMissionSuccess)
 
 	AFPSGameState* GS = GetGameState<AFPSGameState>();
 	if (GS) GS->MulticastOnMissionComplete(InstigatorPawn, bMissionSuccess);
-
-	OnMissionCompleted(InstigatorPawn, bMissionSuccess);
 }
