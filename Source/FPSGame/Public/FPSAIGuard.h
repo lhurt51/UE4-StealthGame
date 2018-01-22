@@ -33,6 +33,7 @@ protected:
 
 	FTimerHandle TimerHandle_ResetOrientation;
 
+	UPROPERTY(ReplicatedUsing=OnRep_GuardState)
 	EAIState GuardState;
 
 	// Called when the game starts or when spawned
@@ -48,6 +49,9 @@ protected:
 	void ResetOrientation();
 
 	void SetGuardState(EAIState NewState);
+
+	UFUNCTION()
+	void OnRep_GuardState();
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "AI")
 	void OnStateChanged(EAIState NewState);
