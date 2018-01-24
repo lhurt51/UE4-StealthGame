@@ -16,8 +16,6 @@ Features
 	- AI Guard that senses players and noises
 	- First Person Weapon that can distract Guard AI (Shoot Projectiles at wall)
 	- Game loop with 'game over' spectating.
-**( Does Not Include Yet )**
-	
 	- Works fully in multiplayer!
 
 
