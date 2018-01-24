@@ -5,7 +5,6 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/SphereComponent.h"
 
-
 // Sets default values
 AFPSBlackHole::AFPSBlackHole()
 {

@@ -7,7 +7,6 @@
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/Character.h"
 
-
 // Sets default values
 AFPSLaunchPad::AFPSLaunchPad()
 {
@@ -50,5 +49,4 @@ void AFPSLaunchPad::OverlapLaunchPad(UPrimitiveComponent* OverlappedComp, AActor
 		PlayEffect();
 	}
 }
-
 
