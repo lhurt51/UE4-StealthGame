@@ -27,3 +27,5 @@ Includes solutions to several challenges you create during the Udemy Course:
 
 
 Based on Tom Looman's simplified FPS Template: https://github.com/tomlooman/SimpleFPSTemplate
+
+(Content in this project may only be used in Unreal Engine projects as per the Unreal Engine EULA)
